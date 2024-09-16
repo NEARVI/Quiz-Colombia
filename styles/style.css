@@ -1,0 +1,135 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, yellow 33%, blue 33% 66%, red 66%);
+    transition: filter 0.5s ease; /* Solo animamos el brillo */
+}
+
+body {
+    background: linear-gradient(to bottom, yellow 33%, blue 33% 66%, red 66%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    transition: background 0.5s ease; /* Suaviza el cambio de fondo */
+}
+
+
+.quiz {
+    background: rgba(255, 255, 255, 0.37); /* Fondo semi-transparente */
+    width: 30rem;
+    padding: 20px;
+    text-align: center;
+    z-index: 1; /* Aseguramos que el contenedor esté encima del fondo */
+    position: relative;
+    backdrop-filter: blur(30px); /* Aplica el desenfoque */
+    border-radius: 10px; /* Bordes redondeados opcionales */
+    box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.1); /* Sombra suave para mejor visibilidad */
+}
+
+h1 {
+    color: #000000;
+    font-size: 3rem;
+    text-align: center;
+    padding: 2px 0;
+}
+
+#question {
+    font-size: 1.7rem;
+    color: #000000;
+}
+
+.buttom {
+    background-color: #010049;;
+    color: white;
+    width: 250px;
+    font-size: 17px;
+    border-radius: 0.3rem;
+    padding: 10px 20px;
+    margin: 10px 40px 10px;
+    outline: 0;
+}
+
+.buttom:hover {
+    cursor: pointer;
+    background: #0d00bd;
+}
+
+#progress {
+    font-size: 20px;
+}
+
+/* Estilos del modal */
+/* Estilos del modal */
+.modal {
+    display: none; /* Oculta el modal por defecto */
+    position: fixed; /* Fija el modal en la pantalla */
+    z-index: 1; /* Asegúrate de que el modal esté por encima del contenido */
+    left: 0;
+    top: 0;
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Alto completo */
+    overflow: auto; /* Habilita el scroll si es necesario */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* Centra el modal verticalmente */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Ancho del modal */
+    max-width: 600px; /* Ancho máximo */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Sombra suave */
+    text-align: center; /* Centra el texto */
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#accept-btn {
+    background-color: #4CAF50; /* Color verde */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 2px;
+    cursor: pointer;
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+#accept-btn:hover {
+    background-color: #45a049; /* Color verde oscuro en hover */
+}
+
+#modal-title {
+    font-size: 35px; /* Tamaño del título */
+    color: rgb(255, 187, 0);
+    margin-bottom: 20px;
+}
+
+#modal-message {
+    font-size: 24px;
+    margin: 20px 0;
+}
